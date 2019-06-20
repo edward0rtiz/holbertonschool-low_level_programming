@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- *main - Prints a string to standard error
+ *main - Prints a line with standard error
  *
- *Description: Prints the string specified to the stderr pointer without using
- *the function fprintf, puts, printf, or any of its derivatives
  *Return: Returns the value 1
  */
 int main(void)
