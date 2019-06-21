@@ -14,20 +14,21 @@ int main(void)
 		f = '0';
 		while (f <= '9')
 		{
-			putchar(i);
-			putchar(f);
-			if ((i == '9') && (f == '9'))
+			if (i < f)
 			{
-				break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
+				putchar(i);
+				putchar(f);
+
+				if ((f != '9' || i != '8'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 			}
 			f++;
 		}
 		i++;
+		f = '0';
 	}
 	putchar('\n');
 	return (0);
