@@ -6,30 +6,31 @@
  */
 int main(void)
 {
-	int i, f;
+	int num1 = '0';
+	int num2 = '0';
 
-	i = '0';
-	while (i <= '9')
+	while (num1 <= '9')
 	{
-		f = '0';
-		while (f <= '9')
+		while (num2 <= '9')
 		{
-			if (i < f)
+			if (!(num1 > num2 || num1 == num2))
 			{
-				putchar(i);
-				putchar(f);
-
-				if ((f != '9' || i != '8'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+				putchar(num1);
+				putchar(num2);
+				if (num1 == '8' && num2 == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			f++;
+			num2++;
 		}
-		i++;
-		f = '0';
+		num2 = '0';
+		num1++;
 	}
-	putchar('\n');
 	return (0);
 }
