@@ -6,28 +6,26 @@
  */
 int main(void)
 {
-	int i, f;
+	int n1, n2;
 
-	i = '0';
-	while (i <= '9')
+	for (n1 = 0; n1 <= 99; n1++)
 	{
-		f = '0';
-		while (f <= '9')
+		for (n2 = 0; n2 <= 99; n2++)
 		{
-			putchar(i);
-			putchar(f);
-			if ((i == '9') && (f == '9'))
+			if (n1 < n2 && n1 != n2)
 			{
-				break;
-			}
-			else
-			{
-				putchar(',');
+				putchar((n1 / 10) + '0');
+				putchar((n1 % 10) + '0');
 				putchar(' ');
+				putchar((n2 / 10) + '0');
+				putchar((n2 % 10) + '0');
+				if (n1 != 99 || n2 != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			f++;
 		}
-		i++;
 	}
 	putchar('\n');
 	return (0);
