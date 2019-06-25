@@ -1,10 +1,11 @@
 #include "holberton.h"
 /**
- * Main: Print Holberton followed by a new line
- * Description: use _putchar.c
+ * Main: prints Holberton, followed by a new line.
+ *
+ * Description: use _putchar.c, other libraries are forbidden.
+ *
  * Return: 0
  */
-
 int main(void)
 
 {
