@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
- * Main: Checs for alphabetic character
+ * _isalpha - Checks for alphabetic character
+ * @c: Type char c
  * Return: 0
  */
 
