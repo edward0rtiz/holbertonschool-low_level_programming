@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * Main: Print alphabet in lower case 10 times
+ * print_alphabet_x10 - Print alphabet in lower case 10 times
  * Description: use _putchar.c
  * Return: 0
  */
