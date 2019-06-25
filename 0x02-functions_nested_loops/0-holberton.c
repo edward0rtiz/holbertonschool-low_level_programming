@@ -8,11 +8,12 @@ int main(void)
 
 {
 	char holberton[] = "Holberton";
-	int c = 0;
+	int a = 0;
 
-	for (c = 0; c <= 9; c++)
+	while (holberton[a] != '\0')
 	{
-		_putchar(holberton[c]);
+		_putchar(holberton[a]);
+		a++;
 	}
 	_putchar('\n');
 
