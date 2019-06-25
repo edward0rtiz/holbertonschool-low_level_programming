@@ -1,11 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * Main: Compute the absolute value of an integer
+ * _abs - Compute the absolute value of an integer
+ * @n: Type int n
  * Return: 0
  */
 
-int print_last_digit(int n)
+int _abs(int n)
 
 {
 	if (n < 0)
