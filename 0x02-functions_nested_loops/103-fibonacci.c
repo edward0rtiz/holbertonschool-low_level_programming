@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * main - Fibonacci num not exceed 4000000
+ * main - fibonacci num not exceed 4000000
  *
  * return: return (0)
  */
+
 int main(void)
 {
 	long int fb1 = 0;
