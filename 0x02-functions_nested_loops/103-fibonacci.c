@@ -15,9 +15,7 @@ int main(void)
 	while (fb3 < 4000000)
 	{
 		if (fb3 % 2 == 0)
-		{
 			fb1 += fb3;
-		}
 
 		sum = fb3;
 		fb3 += fb2;
