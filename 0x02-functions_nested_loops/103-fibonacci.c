@@ -1,10 +1,10 @@
 #include <stdio.h>
-
 /**
  * main - function used for fibonacci
  * description: number not exceed 4000000
  * return: 0
  */
+
 int main(void)
 {
 	int fb1 = 0;
