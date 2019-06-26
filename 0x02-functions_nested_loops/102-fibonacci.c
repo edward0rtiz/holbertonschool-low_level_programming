@@ -10,7 +10,7 @@ int main(void)
 
 	fb1 = 0;
 	fb2 = 1;
-	for (counter = 0; counter <= 50; counter++)
+	for (counter = 0; counter < 50; counter++)
 	{
 		sum = fb1 + fb2;
 		fb1 = fb2;
