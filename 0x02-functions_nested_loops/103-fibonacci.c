@@ -1,19 +1,16 @@
 #include <stdio.h>
-#include "holberton.h"
+
 /**
  * main - function used for fibonacci
- *
- *
- * description: nuber not exceed 4000000
- * return: return success
+ * description: number not exceed 4000000
+ * return: 0
  */
-
 int main(void)
 {
-	long int fb1 = 0;
-	long int fb2 = 1;
-	long int fb3 = 2;
-	long int sum;
+	int fb1 = 0;
+	int fb2 = 1;
+	int fb3 = 2;
+	int sum;
 
 	while (fb3 < 4000000)
 	{
