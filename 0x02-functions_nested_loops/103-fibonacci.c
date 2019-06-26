@@ -1,26 +1,26 @@
 #include <stdio.h>
 /**
- * main - function used for fibonacci
- * description: number not exceed 4000000
- * return: 0
+ * main - print value do not exceed 4000000
+ * Return: 0
  */
-
 int main(void)
 {
-	int fb1 = 0;
-	int fb2 = 1;
-	int fb3 = 2;
-	int sum;
+	int fb1 = 1;
+	int fb2 = 2;
+	int fb3 = 0;
+	int fb0;
 
-	while (fb3 < 4000000)
+	while (fb2 < 4000000)
 	{
-		if (fb3 % 2 == 0)
-			fb1 += fb3;
+		if (fb2 % 2 == 0)
+		{
+			fb3 += fb2;
+		}
 
-		sum = fb3;
-		fb3 += fb2;
-		fb2 = sum;
+		fb0 = fb2;
+		fb2 += fb1;
+		fb1 = fb0;
 	}
-	printf("%ld\n", fb1);
+	printf("%d\n", fb3);
 	return (0);
 }
