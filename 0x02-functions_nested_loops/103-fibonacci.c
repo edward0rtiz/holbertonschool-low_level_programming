@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
- * main - fibonacci num not exceed 4000000
+ * main - function used for fibonacci
  *
- * return: return (0)
+ *
+ * description: nuber not exceed 4000000
+ * return: return success
  */
 
 int main(void)
@@ -18,6 +20,7 @@ int main(void)
 		{
 			fb1 += fb3;
 		}
+
 		sum = fb3;
 		fb3 += fb2;
 		fb2 = sum;
