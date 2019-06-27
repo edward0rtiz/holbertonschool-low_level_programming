@@ -5,22 +5,47 @@
  */
 int main(void)
 {
-	int fb1 = 1;
-	int fb2 = 2;
-	int fb3 = 0;
-	int fb0;
+	long int n, f1, f2, fb1a, fb1b, fb2a, fb2b, fbsa, fbsb, fbx;
+/**    dissections */
+	f1 = 1;
+	f2 = 2;
+	fb1a = f1 % 1000000000;
+	fb1b = f1 / 1000000000;
+	fb2a = f2 % 1000000000;
+	fb2b = f2 / 1000000000;
+	printf("%ld, %ld, ", f1, f2);
 
-	while (fb2 < 4000000)
+	for (n = 3; n <= 98; n++)
 	{
-		if (fb2 % 2 == 0)
+		fbx = (fb1a + fb2a) / 1000000000;
+		fbsa = (fb1a + fb2a) % 1000000000;
+		fbsb = fbx + fb2b + fb1b;
+		fb1a = fb2a;
+		fb1b = fb2b;
+		fb1a = fbsa;
+		fb1b = fbsb;
+		if (n > 55)
 		{
-			fb3 += fb2;
+			if (n < 98)
+			{
+				printf("%ld%09ld, ", fbsb, fbsa);
+			}
+			else
+			{
+				printf("%ld%09ld\n", fbsb, fbsa);
+			}
 		}
-
-		fb0 = fb2;
-		fb2 += fb1;
-		fb1 = fb0;
+		else
+		{
+			if (fbsa == 0)
+			{
+				printf("%ld, ", fbsb);
+			}
+			else
+			{
+				printf("%ld%ld, ", fbsa, fbsb);
+			}
+		}
 	}
-	printf("%d\n", fb3);
 	return (0);
 }
