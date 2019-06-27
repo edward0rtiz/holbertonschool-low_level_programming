@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- * print_diagonal(int n) - Draw a diagonal line in the terminal.
- *
- * Return: Always 0.
+ * print_diagonal - print a diagonal line in the terminal.
+ * @n: Type int
+ * description: can only use _putchar
  */
+
 void print_diagonal(int n)
 {
-	int slash, row;
+	int tab, row;
 
 	row = 0;
 
