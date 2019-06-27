@@ -2,7 +2,7 @@
 
 /**
  * print_line - draw a straigh line in the terminal.
- *
+ * @n: Type int
  * Return:If n is 0 or less only print \n.
  */
 void print_line(int n)
