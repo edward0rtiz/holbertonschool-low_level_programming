@@ -1,6 +1,4 @@
-    
 #include <stdio.h>
-
 /**
  * main - print numbers 1 to 100 plus new line,
  * description: mul of 3 = Fizz, mul of 5 = Buzz.
