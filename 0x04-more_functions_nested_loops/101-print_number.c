@@ -22,7 +22,7 @@ void print_number(int n)
 
 	while (bool)
 	{
-		if (num / ((long)counter * 10) > 0)
+		if (num / (counter * 10) > 0)
 			counter *= 10;
 		else
 		bool = 0;
