@@ -6,9 +6,7 @@
  */
 void print_number(int n)
 {
-	int counter;
- 	int num;
-	int bool;
+	int counter, num, bool;
 
 	counter = 1;
 	num = n;
