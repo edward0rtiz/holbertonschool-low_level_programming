@@ -7,15 +7,15 @@
  */
 int _atoi(char *s)
 {
-	int num, a, neg;
+	int num, a, flag;
 
-	neg = 1;
+	flag = 1;
 	a = num = 0;
 
 	while (((s[a] < '0') || s[a] > '9') && s[a] != 0)
 	{
 		if (s[a] == '-')
-			neg = neg * -1;
+			flag = flag * -1;
 		a++;
 	}
 	while (((s[a] >= '0') && s[a] <= '9') && s[a] != 0)
@@ -31,6 +31,6 @@ int _atoi(char *s)
 			a++;
 		}
 	}
-	neg = neg * -1;
-	return (num * neg);
+	flag = flag * -1;
+	return (num * flag);
 }
