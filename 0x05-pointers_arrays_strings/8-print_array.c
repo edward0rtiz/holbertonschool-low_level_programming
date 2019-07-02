@@ -18,8 +18,8 @@ void print_array(int *a, int n)
 
 		if (b < num)
 		{
-			printf("; ");
+			printf(", ");
 		}
-		printf("\n");
 	}
+	printf("\n");
 }
