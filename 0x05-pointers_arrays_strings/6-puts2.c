@@ -3,7 +3,6 @@
 /**
  * puts2 - Print one char out of 2 of a string.
  * @str: Type char pointer
- * @num: Type char
  * Return: Always 0.
  */
 void puts2(char *str)
