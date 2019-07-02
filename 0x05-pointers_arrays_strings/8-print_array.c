@@ -6,18 +6,20 @@
  * @n: Type int
  * Return: Always 0.
  */
-void print_array(int *a, int n);
+void print_array(int *a, int n)
 {
-	int n;
-	char num;
+	int b, num;
 
-	for (a = 0; str[n] != 0; n++)
+	num = n - 1;
+
+	for (b = 0; b <= num; b++)
 	{
+		printf("%d", a[b]);
+
+		if (b < num)
+		{
+			printf(", ");
+		}
+		printf("\n");
 	}
-	for (n /= 2; str[n] != 0; n++)
-	{
-		a = str[n];
-		_putchar(a);
-	}
-	_putchar('\n');
 }
