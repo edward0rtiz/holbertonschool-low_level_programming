@@ -18,10 +18,9 @@ void print_number(int n)
 		_putchar('-');
 	}
 
-	/* count up */
 	pow = 1;
 	bool = 1;
-	while (c)
+	while (bool)
 	{
 		if (conv / (pow * 10) > 0)
 			pow *= 10;
@@ -29,7 +28,6 @@ void print_number(int n)
 			bool = 0;
 	}
 
-	/* count down */
 	while (conv >= 0)
 	{
 		if (pow == 1)
