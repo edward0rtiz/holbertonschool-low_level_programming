@@ -1,10 +1,9 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * reverse_array - Function that reverse the content of an array of int
  * @a: Type int
- * @n; Type int
+ * @n: Type int
  * Return: Always 0.
  */
 void reverse_array(int *a, int n)
@@ -20,5 +19,6 @@ void reverse_array(int *a, int n)
 		a[x] = a[n];
 		a[n] = flag;
 		x++;
+		n--;
 	}
 }
