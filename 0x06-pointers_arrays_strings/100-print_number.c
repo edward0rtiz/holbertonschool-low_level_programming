@@ -6,37 +6,41 @@
  */
 void print_number(int n)
 {
-	int counter, num, bool;
+	long pow;
+	int bool;
+ 	long conv;
 
-	counter = 1;
-	num = n;
-	bool = 1;
+	conv = n;
 
-	if (num < 0)
+	if (conv < 0)
 	{
-		num *= -1;
+		conv *= -1;
 		_putchar('-');
 	}
 
-	while (bool)
+	/* count up */
+	pow = 1;
+	bool = 1;
+	while (c)
 	{
-		if (num / (counter * 10) > 0)
-			counter *= 10;
+		if (conv / (pow * 10) > 0)
+			pow *= 10;
 		else
 			bool = 0;
 	}
 
-	while (num >= 0)
+	/* count down */
+	while (conv >= 0)
 	{
-		if (counter == 1)
+		if (pow == 1)
 		{
-			_putchar(num % 10 + '0');
-			num = -1;
+			_putchar(conv % 10 + '0');
+			conv = -1;
 		}
 		else
 		{
-			_putchar((num / counter % 10) + '0');
-			counter /= 10;
+			_putchar((conv / pow % 10) + '0');
+			pow /= 10;
 		}
 	}
 }
