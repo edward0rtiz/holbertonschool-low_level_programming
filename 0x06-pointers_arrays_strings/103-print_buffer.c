@@ -34,15 +34,15 @@ void print_buffer(char *b, int size)
 			}
 			printf(" ");
 			j = 0;
-			while (j < 10)
-/**			{
+/**			while (j < 10)
+			{
 				if ((j + i) > size - 1)
 					break;
 				if (b[j + i] <= 31 || b[j + 1] >= '~')
 					b[j + i] = '.';
 				putchar(b[j + i]);
-				j++; */
-			}
+				j++;
+				}*/
 			printf("\n");
 		}
 	}
