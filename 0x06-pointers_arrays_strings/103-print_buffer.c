@@ -7,47 +7,51 @@
  * Return: nothing
  */
 
+#include <stdio.h>
 
-
+/**
+ * print_buffer - prints buffer of a char string
+ * @b: buffer to print
+ * @size: size of buffer
+ * Return: nothing
+ */
 
 void print_buffer(char *b, int size)
 {
-	int len1, len2, bigger, modop, add = 0;
+	int i, j;
 
-	for (len1 = 0; n1[len1] != '\0'; len1++)
-	{
-	}
-	for (len2 = 0; n2[len2] != '\0'; len2++)
-	{
-	}
-	if (len1 >= len2)
-		bigger = len1;
+	if (size <= 0)
+		printf("\n");
 	else
-		bigger = len2;
-	if (size_r <= bigger + 1)
-		return (0);
-
-	while (bigger > 02)
 	{
-		if (len1 >= 0 && len2 >= 0)
+		for (i = 0; i < size; i += 10)
 		{
-			modop = (n1[len1] - '0') + (n2[len2] - '0') + add;
-		}
-		else
-		{
-			if (len1 >= 0 && len2 < 0)
-				modop = (n2[len2] - '0') + add;
-			else
+			printf("%08x: ", i);
+			j = 0;
+			while (j < 10)
 			{
-				if (len1 < 0 && len2 >= 0)
-					modop = (n1[len1] - '0') + add;
+				if (j % 2 == 0 && j != 0)
+					printf(" ");
+				if ((j + i) > size - 1)
+				{
+					printf("  ");
+				}
+				else
+					printf("%.2x", b[i + j]);
+				j++;
 			}
+			printf(" ");
+			j = 0;
+			while (j < 10)
+			{
+				if ((j + i) > size - 1)
+					break;
+				if (b[j + i] <= 31 || b[j + 1] >= '~')
+					b[j + i] = '.';
+				putchar(b[j + i]);
+				j++;
+			}
+			printf("\n");
 		}
-		*(r + bigger) = (modop % 10) + '0';
-		add = modop / 10;
-		len1--, len2--,	bigger--;
 	}
-	if (*(r) == '0')
-		return (r + 1);
-	return (r);
 }
