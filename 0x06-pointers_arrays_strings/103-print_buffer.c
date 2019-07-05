@@ -1,14 +1,16 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * infinite_add - adds two numbers in strings
- * @n1: type string 1
- * @n2: type string 2
- * @r: type buffer string.
- * @size_r: buffer size:
- * Return: pointer dest.
+ * print_buffer - prints buffer of a char string
+ * @b: buffer to print
+ * @size: size of buffer
+ * Return: nothing
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+
+
+
+
+void print_buffer(char *b, int size)
 {
 	int len1, len2, bigger, modop, add = 0;
 
