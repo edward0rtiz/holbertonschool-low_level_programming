@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * int _pow_recursion - Function that returns the value of x  of y.
+ * _pow_recursion - Function that returns the value of x  of y.
  * @x: type int
  * @y: type int
  * Return: y lower than 0 function -1.
