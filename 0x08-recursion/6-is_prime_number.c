@@ -3,8 +3,8 @@
 
 /**
  * funct_prime - Allows operation of _sqrt_recursion
- * @x: type int that define sqrt root
- * @y: type int that compares x
+ * @x: type int
+ * @y: type int operator
  * Return: sqrt int or -1 if not int
  */
 
@@ -21,7 +21,7 @@ int funct_prime(int x, int y)
 /**
  * is_prime_number - function that returns the natural sqr root number.
  * @n: type int
- * Return: If n not sqt root then return -1
+ * Return: 1 if input is integer otherwise is 0
  */
 int is_prime_number(int n)
 {
