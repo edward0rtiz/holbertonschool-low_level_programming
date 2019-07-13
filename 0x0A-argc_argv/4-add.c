@@ -12,7 +12,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, y, add;
+	int x, y;
+	int add;
 
 	(void)argv;
 	add = 0;
