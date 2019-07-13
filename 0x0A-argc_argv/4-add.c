@@ -12,10 +12,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, y;
-	int sum = 0;
+	int x, y, add;
 
 	(void)argv;
+	add = 0;
 	if (argc > 1)
 	{
 		for (x = 1; x < argc; x++)
@@ -28,9 +28,9 @@ int main(int argc, char *argv[])
 					return (1);
 				}
 			}
-			sum = sum + atoi(argv[x]);
+			add = add + atoi(argv[x]);
 		}
 	}
-	printf("%d\n", sum);
+	printf("%d\n", add);
 	return (0);
 }
