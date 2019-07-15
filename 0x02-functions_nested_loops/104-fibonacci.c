@@ -1,51 +1,49 @@
 #include <stdio.h>
 /**
- * main - print 98 fibonacci numbers
- * Return: 0
+ * main - Prints the first 98 Fibonacci numbers
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	long int n, f1, f2, fb1a, fb1b, fb2a, fb2b, fbsa, fbsb, fbx;
-/**    dissections */
-	f1 = 1;
-	f2 = 2;
-	fb1a = f1 % 1000000000;
-	fb1b = f1 / 1000000000;
-	fb2a = f2 % 1000000000;
-	fb2b = f2 / 1000000000;
-	printf("%ld, %ld, ", f1, f2);
+	int i, bool1, bool2;
+	long int n1, n2, fn1, fn2, n11, n22;
 
-	for (n = 3; n <= 98; n++)
+	n1 = 1;
+	n2 = 2;
+	bool1 =  bool2 = 1;
+	printf("%ld, %ld", n1, n2);
+	for (i = 0; i < 96; i++)
 	{
-		fbx = (fb1a + fb2a) / 1000000000;
-		fbsa = (fb1a + fb2a) % 1000000000;
-		fbsb = fbx + fb2b + fb1b;
-		fb1a = fb2a;
-		fb1b = fb2b;
-		fb1a = fbsa;
-		fb1b = fbsb;
-		if (n > 55)
+		if (bool1)
 		{
-			if (n < 98)
-			{
-				printf("%ld%09ld, ", fbsb, fbsa);
-			}
-			else
-			{
-				printf("%ld%09ld\n", fbsb, fbsa);
-			}
+			fn1 = n1 + n2;
+			printf(", %ld", fn1);
+			n1 = n2;
+			n2 = fn1;
 		}
 		else
 		{
-			if (fbsa == 0)
+			if (bool2)
 			{
-				printf("%ld, ", fbsb);
+				n11 = n1 % 1000000000;
+				n22 = n2 % 1000000000;
+				n1 = n1 / 1000000000;
+				n2 = n2 / 1000000000;
+				bool2 = 0;
 			}
-			else
-			{
-				printf("%ld%ld, ", fbsa, fbsb);
-			}
+			fn2 = (n11 + n22);
+			fn1 = n1 + n2 + (fn2 / 1000000000);
+			printf(", %ld", fn1);
+			printf("%ld", fn2 % 1000000000);
+			n1 = n2;
+			n11 = n22;
+			n2 = fn1;
+			n22 = (fn2 % 1000000000);
 		}
+		if (((n1 + n2) < 0) && bool1 == 1)
+			bool1 = 0;
 	}
+	printf("\n");
 	return (0);
 }
