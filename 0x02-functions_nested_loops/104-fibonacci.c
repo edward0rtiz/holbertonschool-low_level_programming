@@ -33,7 +33,7 @@ int main(void)
 			fib3b = fib3b % div;
 			fib3a++;
 		}
-		if (counter != 97)
+		if (counter != 98)
 		{
 			printf("%ld%ld, ", fib3a, fib3b);
 			fib1a = fib2a;
