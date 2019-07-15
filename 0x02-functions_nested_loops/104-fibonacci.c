@@ -1,48 +1,49 @@
 #include <stdio.h>
 /**
- * main - print 98 fibonacci numbers
- * description: find 98 fibo numbers starting 1 and 2
- * Return: 0
+ * main - Prints the first 98 Fibonacci numbers
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	long fib1, fib1a, fib1b, fib2, fib2a, fib2b, fib3, fib3a, fib3b;
-	long div = 10000000000;
+	int i, bool1, bool2;
+	long int n1, n2, fn1, fn2, n11, n22;
 
-	fib1 = 0;
-	fib2 = 1;
-	int counter = 1;
-
-	for (counter = 0; counter < 91; counter++)
+	n1 = 1;
+	n2 = 2;
+	bool1 =  bool2 = 1;
+	printf("%ld, %ld", n1, n2);
+	for (i = 0; i < 96; i++)
 	{
-		fib3 =  fib2 + fib1;
-		fib1 = fib2;
-		fib2 = fib3;
-		printf("%ld, ", fib3);
-	}
-	fib1a = fib1 / div;
-	fib1b = fib1 % div;
-	fib2a = fib2 / div;
-	fib2b = fib2 % div;
-	for (; counter < 98; counter++)
-	{
-		fib3a = fib1a + fib2a;
-		fib3b = fib1b + fib2b;
-		if (fib3b > div)
+		if (bool1)
 		{
-			fib3b = fib3b % div;
-			fib3a++;
-		}
-		if (counter != 98)
-		{
-			printf("%ld%ld, ", fib3a, fib3b);
-			fib1a = fib2a;
-			fib1b = fib2b;
-			fib2a = fib3a;
-			fib2b = fib3b;
+			fn1 = n1 + n2;
+			printf(", %ld", fn1);
+			n1 = n2;
+			n2 = fn1;
 		}
 		else
-			printf("%ld%ld\n", fib3a, fib3b);
+		{
+			if (bool2)
+			{
+				n11 = n1 % 1000000000;
+				n22 = n2 % 1000000000;
+				n1 = n1 / 1000000000;
+				n2 = n2 / 1000000000;
+				bool2 = 0;
+			}
+			fn2 = (n11 + n22);
+			fn1 = n1 + n2 + (fn2 / 1000000000);
+			printf(", %ld", fn1);
+			printf("%ld", fn2 % 1000000000);
+			n1 = n2;
+			n11 = n22;
+			n2 = fn1;
+			n22 = (fn2 % 1000000000);
+		}
+		if (((n1 + n2) < 0) && bool1 == 1)
+			bool1 = 0;
 	}
+	printf("\n");
 	return (0);
 }
