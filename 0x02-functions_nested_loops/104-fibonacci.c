@@ -5,47 +5,43 @@
  */
 int main(void)
 {
-	long int n, f1, f2, fb1a, fb1b, fb2a, fb2b, fbsa, fbsb, fbx;
-/**    dissections */
-	f1 = 1;
-	f2 = 2;
-	fb1a = f1 % 1000000000;
-	fb1b = f1 / 1000000000;
-	fb2a = f2 % 1000000000;
-	fb2b = f2 / 1000000000;
-	printf("%ld, %ld, ", f1, f2);
+	long int fib1, fib1a, fib1b, fib2, fib2a, fib2b, fib3, fib3a, fib3b;
+	long int div = 10000000000;
 
-	for (n = 3; n <= 98; n++)
+	fib1 = 0;
+	fib2 = 1;
+	int counter = 1;
+
+	for (counter = 0; counter < 91; counter++)
 	{
-		fbx = (fb1a + fb2a) / 1000000000;
-		fbsa = (fb1a + fb2a) % 1000000000;
-		fbsb = fbx + fb2b + fb1b;
-		fb1a = fb2a;
-		fb1b = fb2b;
-		fb1a = fbsa;
-		fb1b = fbsb;
-		if (n > 55)
+		fib3 =  fib2 + fib1;
+		fib1 = fib2;
+		fib2 = fib3;
+		printf("%ld, ", fib3);
+	}
+	fib1a = fib1 / div;
+	fib1b = fib1 % div;
+	fib2a = fib2 / div;
+	fib2b = fib2 % div;
+	for (; counter < 98; counter++)
+	{
+		fib3a = fib1a + fib2a;
+		fib3b = fib1b + fib2b;
+		if (fib3b > div)
 		{
-			if (n < 98)
-			{
-				printf("%ld%09ld, ", fbsb, fbsa);
-			}
-			else
-			{
-				printf("%ld%09ld\n", fbsb, fbsa);
-			}
+			fib3b = fib3b % div;
+			fib3a++;
+		}
+		if (counter != 97)
+		{
+			printf("%ld%ld, ", fib3a, fib3b);
+			fib1a = fib2a;
+			fib1b = fib2b;
+			fib2a = fib3a;
+			fib2b = fib3b;
 		}
 		else
-		{
-			if (fbsa == 0)
-			{
-				printf("%ld, ", fbsb);
-			}
-			else
-			{
-				printf("%ld%ld, ", fbsa, fbsb);
-			}
-		}
+			printf("%ld%ld\n", fib3a, fib3b);
 	}
 	return (0);
 }
