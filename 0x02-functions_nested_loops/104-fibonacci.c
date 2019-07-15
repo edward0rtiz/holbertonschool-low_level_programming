@@ -5,8 +5,8 @@
  */
 int main(void)
 {
-	long int fib1, fib1a, fib1b, fib2, fib2a, fib2b, fib3, fib3a, fib3b;
-	long int div = 10000000000;
+	long fib1, fib1a, fib1b, fib2, fib2a, fib2b, fib3, fib3a, fib3b;
+	long div = 10000000000;
 
 	fib1 = 0;
 	fib2 = 1;
