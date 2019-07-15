@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - print 98 fibonacci numbers
+ * description: find 98 fibo numbers starting 1 and 2
  * Return: 0
  */
 int main(void)
