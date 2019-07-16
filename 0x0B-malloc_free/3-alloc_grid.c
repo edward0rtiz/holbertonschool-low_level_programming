@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 /**
- * **alloc_grid - return a pointer to aa 2 dimensional array of int
+ * alloc_grid - return a pointer to aa 2 dimensional array of int
+ * description: grid must initialize in 0 
  * @width: type int width.
  * @height: type int height.
  * Return: Null if 0 or negative.
