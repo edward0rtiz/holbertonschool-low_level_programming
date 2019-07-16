@@ -10,7 +10,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *pstr;
+	char *pstr = NULL;
 	char *len;
 	unsigned int x, y, z;
 
@@ -25,10 +25,11 @@ char *str_concat(char *s1, char *s2)
 	for (y = 0; s2[y] != '\0'; y++)
 		;
 	y++;
-	pstr = malloc((x + y + 1) * sizeof(*pstr));
+	pstr = malloc((x + y) * sizeof(*pstr));
 	if (pstr == NULL)
+	{
 		return (NULL);
-
+	}
 	for (z = 0; s1[z] != '\0'; z++)
 		pstr[z] = s1[z];
 	y = 0;
