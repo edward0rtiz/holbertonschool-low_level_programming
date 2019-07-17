@@ -1,6 +1,10 @@
 #include "holberton.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+int wstrlen(char *str);
+int wcounter(char *str);
+char **strtow(char *str);
 
 
 /**
@@ -15,7 +19,8 @@ int wstrlen(char *str)
 	int len = 0;
 
 	for (pos = 0; (*(str + pos)) && *(str + pos) != ' '; pos++, len++)
-		return (len);
+		;
+	return (len);
 }
 
 /**
@@ -47,11 +52,11 @@ int wcounter(char *str)
  * @str: Type char str
  * Return: If str NULL or str = "" or function fails - NULL.
  */
-int **strtow(char *str)
+char **strtow(char *str)
 {
 	char **strs;
 	int pos = 0;
-	int let, w, x, y;
+	int letter, w, x, y;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
@@ -68,8 +73,10 @@ int **strtow(char *str)
 	{
 		while (str[pos] == ' ')
 			pos++;
-		Let = wstrlen(str + pos);
-		strs[x] = malloc(sizeof(char) * (let + 1));
+
+		letter = wstrlen(str + pos);
+
+		strs[x] = malloc(sizeof(char) * (letter + 1));
 
 		if (strs[x] == NULL)
 		{
@@ -78,7 +85,7 @@ int **strtow(char *str)
 			free(strs);
 			return (NULL);
 		}
-		for (y = 0; y < let; y++)
+		for (y = 0; y < letter; y++)
 			(*(*(strs + x) + y)) = str[pos++];
 		(*(*(strs + x) + y)) = '\0';
 	}
