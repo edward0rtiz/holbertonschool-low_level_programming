@@ -2,9 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int wstrlen(char *str);
-int wcounter(char *str);
-char **strtow(char *str);
+
 /**
  * wstrlen - Calculates position of a word in a str
  * @str: type char str
