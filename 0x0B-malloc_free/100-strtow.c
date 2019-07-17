@@ -2,15 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int wstrlen(char *str);
-int wcounter(char *str);
-char **strtow(char *str);
-
-
 /**
  * wstrlen - Calculates position of a word in a str
  * @str: type char str
- * desciption: function that returns a value position
+ * description: function that returns a value position
  * return: wstrlen 0
  */
 int wstrlen(char *str)
@@ -26,7 +21,7 @@ int wstrlen(char *str)
 /**
  * wcounter - Counter of words in s str
  * @str: type char str
- * desciption: function that returns a value string
+ * description: function that returns a value string
  * return: wcounter 0
  */
 int wcounter(char *str)
@@ -50,6 +45,7 @@ int wcounter(char *str)
 /**
  * strtow - Function that splits a string into words.
  * @str: Type char str
+ * description: function
  * Return: If str NULL or str = "" or function fails - NULL.
  */
 char **strtow(char *str)
