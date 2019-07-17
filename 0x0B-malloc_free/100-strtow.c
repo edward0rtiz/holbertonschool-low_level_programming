@@ -51,7 +51,7 @@ int **strtow(char *str)
 {
 	char **strs;
 	int pos = 0;
-	int len, len, w, x, y;
+	int let, w, x, y;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
@@ -68,7 +68,7 @@ int **strtow(char *str)
 	{
 		while (str[pos] == ' ')
 			pos++;
-		Let = wstrlen(str + index);
+		Let = wstrlen(str + pos);
 		strs[x] = malloc(sizeof(char) * (let + 1));
 
 		if (strs[x] == NULL)
