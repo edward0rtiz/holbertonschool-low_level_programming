@@ -43,7 +43,7 @@ int wcounter(char *str)
 	return (w);
 }
 /**
- * strtow - Function that splits a string into words.
+ * **strtow - Function that splits a string into words.
  * @str: Type char str
  * description: function
  * Return: If str NULL or str = "" or function fails - NULL.
