@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <limits.h>
 /**
- * *malloc_checked - create array of char.
+ * malloc_checked - create array of char.
  * @b: type unsigned int.
  * Return: Pointer of allocated memory.
  */
