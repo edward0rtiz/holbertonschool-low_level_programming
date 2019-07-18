@@ -8,9 +8,9 @@
  * @argv: type char argument of string.
  * Return: if not receive 2 arg, rt error
  */
-int main(unsigned int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	unsigned int n1, n2, mul;
+	int n1, n2, mul;
 
 	if (argc != 3)
 		printf("Error\n");
