@@ -44,7 +44,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (x < len)
 			*(p + x) = *(s1 + x);
 		else
-			*(p + x) = *(s2 + y + 1);
+		{
+			*(p + x) = *(s2 + y);
+			y++;
+		}
 	}
 	*(p + x) = '\0';
 
