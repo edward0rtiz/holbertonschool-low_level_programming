@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * new_dog - Function that creates a new dog.
+ * free_dog - Free dogs.
  * @d: type pointer struct data.
  * Return: 0.
  */
