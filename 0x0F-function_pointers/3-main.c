@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(EXIT_FAILURE);
 	}
-	ope = argv[2];
+	op = argv[2];
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	if (op[0] == '/' || op[0]) == '%') && num2 == 0)
