@@ -21,11 +21,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	if (bytes == 0)
-	{
-		putchar('\n');
-		exit(EXIT_SUCCESS);
-	}
 	printf("%02x", *((unsigned char *) (main)));
 	for (x = 1; x < bytes; ++x)
 		printf(" %02x", *((unsigned char *) (main + x)));
