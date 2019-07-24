@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_SUCCESS);
 	}
 	printf("%02x", *((unsigned char *) (main)));
-	for (x = 1; x < bytes; ++x)
+	for (x = 0; x < bytes; x++)
 		printf(" %02x", *((unsigned char *) (main + x)));
 	putchar('\n');
 	exit(EXIT_SUCCESS);
