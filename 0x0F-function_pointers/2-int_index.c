@@ -5,6 +5,7 @@
  * @array: Type int array pointer
  * @size: Type pointer size of the array
  * @cmp: Type pointer to the function compare values
+ * return: return -1 if size <=0 or elem no matches -1
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
