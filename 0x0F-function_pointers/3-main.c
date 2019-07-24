@@ -9,20 +9,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, total, j;
+	int num1, num2, total;
 	int (*op_func)(int, int);
 	char *op;
 
-	j = 0;
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(EXIT_FAILURE);
 	}
-	op = argv[2];
+	ope = argv[2];
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	if ((*(op + j) == '/' || *(op + j) == '%') && num2 == 0)
+	if (op[0] == '/' || op[0]) == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(EXIT_FAILURE);
