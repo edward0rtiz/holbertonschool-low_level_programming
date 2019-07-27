@@ -1,10 +1,11 @@
-#include "variadic_functions.h"
+B#include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
 /**
  * _printc - Funtion that prints a char
  * @valist: type va_list
+ * @s: type char
  */
 void _printc(va_list valist, char *s)
 {
@@ -13,6 +14,7 @@ void _printc(va_list valist, char *s)
 /**
  * _printi - Funtion that prints an int
  * @valist: type va_list
+ * @s: type char
  */
 void _printi(va_list valist, char *s)
 {
@@ -21,14 +23,16 @@ void _printi(va_list valist, char *s)
 /**
  * _printF - Funtion that prints an int
  * @valist: type va_list
+ * @s: type char
  */
 void _printF(va_list valist, char *s)
 {
 	printf("%s%f", s, va_arg(valist, double));
 }
 /**
- * _printF - Funtion that prints an int
+ * _printstr - Funtion that prints a string
  * @valist: type va_list
+ * @s: type char
  */
 void _printstr(va_list valist, char *s)
 {
@@ -42,6 +46,7 @@ void _printstr(va_list valist, char *s)
 /**
  * print_all - Function that prints CIFS
  * @format: Type list of arg CIFS
+ *
  */
 
 void print_all(const char * const format, ...)
@@ -68,8 +73,7 @@ void print_all(const char * const format, ...)
 			x++;
 		if (x < 4)
 		{
-
-	p[x].f(valist, s);
+			p[x].f(valist, s);
 			s = ", ";
 		}
 		y++;
