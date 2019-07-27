@@ -43,6 +43,7 @@ void _printstr(va_list valist, char *s)
  * print_all - Function that prints CIFS
  * @format: Type list of arg CIFS
  */
+
 void print_all(const char * const format, ...)
 {
 	va_list valist;
