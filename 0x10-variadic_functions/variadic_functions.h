@@ -1,10 +1,11 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 #include <stdarg.h>
+
 /**
- * struct print_all - search the func for print_all
+ * struct print - search the func for print_all
  * @c: character to match
- * @f: function for that character
+ * @f: function for that character.
  */
 typedef struct print
 {
