@@ -2,6 +2,7 @@
 
 /**
  * sum_them_all - func that returns the sum of all parameters.
+ *
  * @n: type unsigned int
  * return: sum
  */
