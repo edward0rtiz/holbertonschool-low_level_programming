@@ -1,7 +1,8 @@
 #include <stdarg.h>
+
 /**
  * sum_them_all - func that returns the sum of all parameters.
- * @n: Type unsigned int
+ * @n: type unsigned int
  * return: sum
  */
 
@@ -16,13 +17,14 @@ int sum_them_all(const unsigned int n, ...)
 
 
 	va_start(valist, n);
-	sum = x = 0;
 
+	sum = x = 0;
 	while (x < n)
 	{
-		sum = sum + va_arg(valist, int);
+		sum += va_arg(valist, int);
 		x++;
 	}
+
 	va_end(valist);
 	return (sum);
 }
