@@ -2,8 +2,9 @@
 /**
  * sum_them_all - func that returns the sum of all parameters.
  * @n: Type unsigned int
- * Return: sum
+ * return: sum
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	int sum;
