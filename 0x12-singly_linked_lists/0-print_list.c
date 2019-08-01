@@ -8,8 +8,8 @@
 
 size_t print_list(const list_t *h)
 {
+	size_t i;
 	const list_t *tmp;
-	int i;
 
 	i = 0;
 	tmp = h;
