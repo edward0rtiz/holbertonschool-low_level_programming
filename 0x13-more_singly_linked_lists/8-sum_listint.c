@@ -1,11 +1,9 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - insert a node in a given position.
+ * sum_listint - return the sum of all data (n) of a listint.
  * @head: data type pointer the head/next node
- * @idx; data type unsigned int index
- * @i: data type int
- * Return: new_node
+ * Return: sum of all nodes
  */
 int sum_listint(listint_t *head)
 {
@@ -16,7 +14,7 @@ int sum_listint(listint_t *head)
 		return (0);
 
 	tmp_node = head;
-	while(tmp_node)
+	while (tmp_node)
 	{
 		sum += tmp_node->n;
 		tmp_node = tmp_node->next;
