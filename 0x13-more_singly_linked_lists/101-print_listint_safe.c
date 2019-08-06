@@ -13,10 +13,8 @@ size_t print_listint_safe(const listint_t *head)
 	size_t new_node;
 
 	tmp_node = head;
-	if (head == 0)
-	{
+	if (!head)
 		exit(98);
-	}
 	while (tmp_node)
 	{
 		printf("[%p] %d\n", (void *)tmp_node, tmp_node->n);
