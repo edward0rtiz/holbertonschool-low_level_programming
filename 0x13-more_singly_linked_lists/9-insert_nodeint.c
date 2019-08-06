@@ -3,8 +3,8 @@
 /**
  * insert_nodeint_at_index - insert a node in a given position.
  * @head: data type pointer the head/next node
- * @idx; data type unsigned int index
- * @i: data type int
+ * @idx: data type unsigned int index
+ * @n: data type int
  * Return: new_node
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
