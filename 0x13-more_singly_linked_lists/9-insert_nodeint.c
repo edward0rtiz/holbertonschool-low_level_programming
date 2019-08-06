@@ -12,7 +12,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *tmp_node, *new_node;
 	unsigned int counter = 0;
 
-	if (head == 0 && *head == 0)
+	if (head == NULL && *head == NULL)
 		return (NULL);
 
 	tmp_node = *head;
