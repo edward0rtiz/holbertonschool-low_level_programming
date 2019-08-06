@@ -3,9 +3,8 @@
 /**
  * delete_nodeint_at_index - deletes the node at the index of listint.
  * @head: data type pointer the head/next node
- * @idx; data type unsigned int index
- * @i: data type int
- * Return: new_node
+ * @index: data type unsigned int index
+ * Return: 1 if succed and -1 if fail
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
