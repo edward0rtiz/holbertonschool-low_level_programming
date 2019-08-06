@@ -7,7 +7,7 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t counter;
+	size_t counter = 0;
 	listint_t *safe_node = *h;
 	listint_t *tmp_node;
 
