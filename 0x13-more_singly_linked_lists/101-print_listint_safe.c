@@ -28,7 +28,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (tmp_node == l_node)
 			{
-				printf("l node: [%p] %d\n", (void *)tmp_node, tmp_node->n);
+				printf("-> [%p] %d\n", (void *)tmp_node, tmp_node->n);
 				return (counter);
 			}
 			l_node = l_node->next;
