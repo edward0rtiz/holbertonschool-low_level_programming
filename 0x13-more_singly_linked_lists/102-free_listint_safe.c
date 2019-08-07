@@ -17,7 +17,7 @@ size_t free_listint_safe(listint_t **h)
 	{
 		counter++;
 		tmp_node = safe_node;
-		safe_node = (*safe_node).next;
+		safe_node = safe_node->next;
 		free(tmp_node);
 
 		if (tmp_node < safe_node)
