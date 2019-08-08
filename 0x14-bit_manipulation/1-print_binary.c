@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * right_pbin_mask - recursion function to print bit 0 (acts as a mask)
+ * _right_pbin_mask - recursion function to print bit 0 (acts as a mask)
  * @n: type const unsigned long int
  */
 
