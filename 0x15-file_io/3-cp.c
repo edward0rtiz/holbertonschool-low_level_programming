@@ -16,8 +16,8 @@
 int main(int argc, char *argv[])
 {
 	char buffer[BUFFER_SIZE];
-	char *ff;
-	char *ft;
+	char *file_from;
+	char *file_to;
 	int fdread;
 	int fdwrite;
 	int cfile = 0;
@@ -28,18 +28,19 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	ff = argv[1];
-	ft = argv[2];
-	fdread = open(ff, O_RDONLY);
+	file_from = argv[1];
+	file_to = argv[2];
+	fdread = open(file_from, O_RDONLY);
 	if (fdread == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", ff);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+			file_from);
 		exit(98);
 	}
-	fdwrite = open(ft, O_CREAT | O_TRUNC | O_WRONLY, 00664);
+	fdwrite = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 00664);
 	if (fdwrite == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", ft);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
 	while ((rd = read(fdread, buffer, BUFFER_SIZE)))
