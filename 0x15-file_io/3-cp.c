@@ -6,7 +6,6 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #define BUFFER_SIZE 1204
-
 /**
  * main - Function that copies the content of a file to another file
  * @argc: argument of count
@@ -16,11 +15,8 @@
 int main(int argc, char *argv[])
 {
 	char buffer[BUFFER_SIZE];
-	char *file_from;
-	char *file_to;
-	int fdread;
-	int fdwrite;
-	int cfile = 0;
+	char *file_from, *file_to;
+	int fdread, fdwrite, cfile = 0;
 	ssize_t rd;
 
 	if (argc != 3)
