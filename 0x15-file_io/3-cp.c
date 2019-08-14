@@ -3,8 +3,8 @@
 #define BUFFER_SIZE 1024
 /**
  * close_w - close function
- * @fread: read
- * @fwrite: write
+ * @fdread: read
+ * @fdwrite: write
  */
 void close_w(int fdread, int fdwrite)
 {
