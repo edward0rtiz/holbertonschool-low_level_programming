@@ -52,6 +52,8 @@ int main(int argc, char *argv[])
 		cfile = 1;
 	}
 	if (cfile)
+	{
 		exit(100);
+	}
 	return (0);
 }
