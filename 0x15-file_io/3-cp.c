@@ -41,12 +41,12 @@ int main(int argc, char *argv[])
 	}
 	while ((rd = read(fdread, buffer, BUFFER_SIZE)))
 		write(fdwrite, buffer, rd);
-	if (close(fdwrite))
+	if (close(fdwrite) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdwrite);
 		cfile = 1;
 	}
-	if (close(fdread))
+	if (close(fdread) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdread);
 		cfile = 1;
