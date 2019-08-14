@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	char buffer[BUFFER_SIZE];
 	char *file_from, *file_to;
 	int fdread, fdwrite, cfile = 0;
-	ssize_t rd;
+	ssize_t rd = 1024;
 
 	if (argc != 3)
 	{
@@ -52,8 +52,6 @@ int main(int argc, char *argv[])
 		cfile = 1;
 	}
 	if (cfile)
-	{
 		exit(100);
-	}
 	return (0);
 }
