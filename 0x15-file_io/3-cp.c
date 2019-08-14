@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 			file_from);
 		exit(98);
 	}
-	fdwrite = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	fdwrite = open(file_to, O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0664);
 	if (fdwrite == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
