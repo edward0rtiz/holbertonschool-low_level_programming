@@ -1,10 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#define BUFFER_SIZE 1204
+#include "holberton.h"
+
+#define BUFFER_SIZE 1024
 /**
  * main - Function that copies the content of a file to another file
  * @argc: argument of count
@@ -16,7 +12,7 @@ int main(int argc, char *argv[])
 	char buffer[BUFFER_SIZE];
 	char *file_from, *file_to;
 	int fdread, fdwrite, cfile = 0;
-	ssize_t rd = 1024;
+	ssize_t rd = 1024, wr;
 
 	if (argc != 3)
 	{
@@ -28,8 +24,7 @@ int main(int argc, char *argv[])
 	fdread = open(file_from, O_RDONLY);
 	if (fdread == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	fdwrite = open(file_to, O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0664);
@@ -38,8 +33,18 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	while ((rd = read(fdread, buffer, BUFFER_SIZE)))
-		write(fdwrite, buffer, rd);
+	while ( rd == BUFFER_SIZE)
+	{
+		rd = read(fdread, buffer, BUFFER_SIZE);
+		if (rd == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			exit(98); }
+		wr = write(fdwrite, buffer, rd);
+		if (wr == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			exit(99);}}
 	if (close(fdwrite) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdwrite);
