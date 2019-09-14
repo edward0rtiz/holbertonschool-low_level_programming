@@ -4,7 +4,7 @@
  * add_dnodeint - add a anode at the beginning of a dlistint list
  * @head: type dpointer of node
  * @n: type int struct list is number
- * return: &address of new element
+ * Return: &address of new element
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
