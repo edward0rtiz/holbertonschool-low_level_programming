@@ -3,7 +3,7 @@
 /**
  * print_dlistint - print all elements of a dlistint.
  * @h: type dlistint point of prev and next node
- * return: n_nodes.
+ * Return: n_nodes.
  */
 size_t print_dlistint(const dlistint_t *h)
 {
