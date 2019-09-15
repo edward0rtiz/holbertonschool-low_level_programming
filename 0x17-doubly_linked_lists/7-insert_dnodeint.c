@@ -2,8 +2,10 @@
 
 /**
  * insert_dnodeint_at_index - return the nth node of a dlistint list
- * @head: type pointer dlistint node
- * @index: type unsigned int index position of the node
+ * @h: type pointer dlistint nodes
+ * @idx: type unsigned int index of node
+ * @n: type int value of node
+ * Return: return the new node or NULL if failed
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
