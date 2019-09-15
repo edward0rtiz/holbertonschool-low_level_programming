@@ -30,7 +30,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		temp_node->prev->next = temp_node->next;
 		if (temp_node->next != NULL)
-			temp_node->next = temp_node->prev;
+			temp_node->next->prev = temp_node->prev;
 	}
 	free(temp_node);
 	return (1);
