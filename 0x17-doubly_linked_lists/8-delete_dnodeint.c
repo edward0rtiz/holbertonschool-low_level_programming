@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * delete_dnodeint_at_index - delete node at index
+ * @head: type dpointer of next and prev node
+ * @index: type unisgned int index of node
+ * Return: 1 if success or -1 if node NULL
+ */
+
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *temp_node = *head;
