@@ -1,16 +1,17 @@
 #include "hash_tables.h"
 
 /**
- *
- *
- *
- *
+ * hash_table_set - add an element at the hash table
+ * @ht: Type pointer to the hash table
+ * @key: Type const char pointer of the key
+ * @value: Value of the key
+ * Return: 0 if fail or 1 if success
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int i, idx;
 	char *copy_val;
-	hash_note_t *new_ht;
+	hash_node_t *new_ht;
 
 	copy_val = strdup(value);
 	if (copy_val == NULL)
