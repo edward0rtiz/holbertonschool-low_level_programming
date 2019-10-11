@@ -19,13 +19,16 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (idx >= ht->size)
 		return (NULL);
 
-	current_node = ht->array[idx];
-	for (; current_node && strcmp(current_node->key, key) != 0; current_node = current_node->next)
+	for (current_node = ht->array[idx];
+	     current_node && strcmp(current_node->key, key) != 0;
+	     current_node = current_node->next)
+		;
+	if (current_node == NULL)
 	{
-		if (current_node == NULL)
-		{
-			return (NULL);
-		}
-       	}
-	return (current_node->value);
+		return (NULL);
+	}
+	else
+	{
+		return (current_node->value);
+	}
 }
