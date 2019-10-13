@@ -62,6 +62,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (new_ht == NULL)
 	{
 		free(copy_val);
+		free(new_ht);
 		return (0);
 	}
 	new_ht->key = strdup(key);
@@ -76,8 +77,8 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	if (ht->shead == NULL)
 	{
-		new_ht->snext = NULL;
 		new_ht->sprev = NULL;
+		new_ht->snext = NULL;
 		ht->shead = new_ht;
 		ht->stail = new_ht;
 	}
@@ -86,7 +87,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		new_ht->sprev = NULL;
 		new_ht->snext = ht->shead;
 		ht->shead->sprev = new_ht;
-		ht->stail = new_ht;
+		ht->shead = new_ht;
 	}
 	else
 	{
@@ -104,7 +105,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 	}
 
-return (1);
+	return (1);
 }
 
 /**
@@ -155,7 +156,6 @@ void shash_table_print(const shash_table_t *ht)
 	     current_node = current_node->next)
 	{
 		printf("'%s': '%s'", current_node->key, current_node->value);
-		current_node = current_node->next;
 		if (current_node != NULL)
 			printf(", ");
 	}
