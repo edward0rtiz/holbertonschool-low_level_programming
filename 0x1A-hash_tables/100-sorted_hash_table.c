@@ -175,7 +175,8 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 	current_node = ht->stail;
 	printf("{");
-	for (current_node = ht->stail; current_node != NULL; current_node = current_node->sprev)
+	for (current_node = ht->stail; current_node != NULL;
+	     current_node = current_node->sprev)
 	{
 		printf("'%s': '%s'", current_node->key, current_node->value);
 		if (current_node != NULL)
