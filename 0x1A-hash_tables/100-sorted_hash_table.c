@@ -125,7 +125,8 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	if (idx >= ht->size)
 		return (NULL);
 
-	for (current_node = ht->shead; current_node != NULL && strcmp(current_node->key, key) != 0;
+	for (current_node = ht->shead;
+	     current_node != NULL && strcmp(current_node->key, key) != 0;
 	     current_node = current_node->snext)
 		;
 	if (current_node == NULL)
