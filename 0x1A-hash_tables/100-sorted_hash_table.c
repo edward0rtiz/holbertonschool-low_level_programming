@@ -126,10 +126,10 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	if (idx >= ht->size)
 		return (NULL);
 
-	for (current_node = ht->shead;
-	     current_node && strcmp(current_node->key, key) != 0;
-	     current_node = current_node->snext)
-		;
+	current_node = ht->shead;
+	while(current_node != NULL && strcmp(current_node->key, key) != 0)
+		current_node = current_node->snext;
+
 	if (current_node == NULL)
 	{
 		return (NULL);
@@ -152,7 +152,7 @@ void shash_table_print(const shash_table_t *ht)
 		return;
 
 	for (current_node = ht->shead; current_node != NULL;
-	     current_node = current_node->next)
+	     current_node = current_node->snext)
 	{
 		printf("'%s': '%s'", current_node->key, current_node->value);
 		if (current_node != NULL)
