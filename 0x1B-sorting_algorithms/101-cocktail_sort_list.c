@@ -40,12 +40,12 @@ void swap_tail(listint_t **list, listint_t **head, listint_t **tail)
  */
 void swap_head(listint_t **list, listint_t **tail, listint_t **head)
 {
-	listint_t *temp = (*head)->next;
+	listint_t *temp = (*head)->prev;
 
-	if ((*head)->next != NULL)
+	if ((*head)->prev != NULL)
 		(*head)->next->prev = temp;
 	else
-		*tail = temp;
+		*list = temp;
 	temp->next = (*tail)->next;
 	(*head)->prev = temp->prev;
 	if (temp->prev != NULL)
