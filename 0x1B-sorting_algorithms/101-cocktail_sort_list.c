@@ -73,10 +73,12 @@ void cocktail_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 	for (tail = *list; tail->next != NULL;)
-		tail = tail->next;
-
-	for (; booln == false; booln = true)
 	{
+		tail = tail->next;
+	}
+	while (booln == false)
+	{
+		booln = true;
 		for (head = *list; head != tail; head = head->next)
 		{
 			if (head->n > head->next->n)
