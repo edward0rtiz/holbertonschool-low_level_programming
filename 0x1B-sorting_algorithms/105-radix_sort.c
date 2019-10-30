@@ -65,6 +65,8 @@ void radix_sort(int *array, size_t size)
 {
 	int mx, exp, *copy;
 
+	if (array == NULL || size < 2)
+		return;
 	copy = malloc(sizeof(int) * size);
 	if (copy == NULL)
 		return;
