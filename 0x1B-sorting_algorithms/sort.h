@@ -4,7 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/**
+ * enum bool - struct for bool type
+ *@false: false is equivalent to 0
+ *@true: equivalent to 1
+ * Return: nothing
+ */
 typedef enum bool
 {
 	false = 0,
