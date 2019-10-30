@@ -18,7 +18,7 @@ void merge_sub(int *subarray, int *buffer, size_t lo, size_t mid, size_t hi)
 	printf("Merging...\n[left]: ");
 	print_array(subarray + lo, mid - lo);
 
-	printf("[Right]: ");
+	printf("[right]: ");
 	print_array(subarray + mid, hi - mid);
 
 	for (low = lo, midi = mid; low < mid && midi < hi; a++)
