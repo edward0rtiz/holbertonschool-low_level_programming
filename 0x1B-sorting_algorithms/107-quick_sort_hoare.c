@@ -62,16 +62,12 @@ int partition_hoare(int *array, size_t size, int low, int high)
 	pivot = array[high];
 	for (high1 = low - 1, low1 = high + 1; high1 < low1;)
 	{
-		do
-		{
+		do {
 			high1++;
-		}
-		while (array[high1] < pivot);
-		do
-		{
+		} while (array[high1] < pivot);
+		do {
 			low1--;
-		}
-		while (array[low1] > pivot);
+		} while (array[low1] > pivot);
 
 		if (high1 < low1)
 		{
