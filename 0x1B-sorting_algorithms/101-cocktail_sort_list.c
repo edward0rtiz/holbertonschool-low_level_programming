@@ -45,8 +45,8 @@ void swap_head(listint_t **list, listint_t **tail, listint_t **head)
 	if ((*head)->prev != NULL)
 		(*head)->next->prev = temp;
 	else
-		*list = temp;
-	temp->next = (*tail)->next;
+		*tail = temp;
+	temp->next = (*head)->next;
 	(*head)->prev = temp->prev;
 	if (temp->prev != NULL)
 	{
