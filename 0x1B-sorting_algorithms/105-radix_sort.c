@@ -1,5 +1,12 @@
 #include "sort.h"
 
+/**
+ * get_max - To get the max of the array
+ *@array: array to be sorted
+ *@size: size to be sorted
+ *
+ * Return: int
+ */
 int get_max(int *array, int size)
 {
 	int mx, i;
@@ -14,6 +21,14 @@ int get_max(int *array, int size)
 	return (mx);
 }
 
+/**
+ * lsd_sort - sorting algo
+ *@array: array to be sorted
+ *@size: size of array to be sorted
+ *@exp: exp
+ *@copy: copy
+ * Return: void
+ */
 void lsd_sort(int *array, size_t size, int exp, int *copy)
 {
 	size_t i;
@@ -40,7 +55,12 @@ void lsd_sort(int *array, size_t size, int exp, int *copy)
 		array[i] = copy[i];
 	}
 }
-
+/**
+ * radix_sort - radix sorting algo function
+ *@array: array to be sorted
+ *@size: size of array to be sorted
+ * Return: void
+ */
 void radix_sort(int *array, size_t size)
 {
 	int mx, exp, *copy;
