@@ -70,6 +70,9 @@ void cocktail_sort_list(listint_t **list)
 	listint_t *head;
 	listint_t *tail;
 
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
+		return;
+	
 	for (tail = *list; tail->next != NULL;)
 		tail = tail->next;
 
