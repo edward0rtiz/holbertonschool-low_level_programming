@@ -3,11 +3,6 @@
 
 def island_perimeter(grid):
 
-    if (type(grid) != list or
-        not all(type(row) == list for row in grid) or
-        not all(type(n) == int for n in [i for j in grid for i in j])):
-        return 0
-
     wd = len(grid[0])
     ht = len(grid)
     per = 0
