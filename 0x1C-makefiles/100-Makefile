@@ -5,6 +5,8 @@ NAME = holberton
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+.PHONY: all clean oclean fclean re
+
 all: $(OBJ)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
