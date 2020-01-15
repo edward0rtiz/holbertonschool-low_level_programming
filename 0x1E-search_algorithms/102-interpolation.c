@@ -2,8 +2,8 @@
 #include <math.h>
 
 /**
- * jump_search - funct that searches for a value in a sorted array
- * of int iterating using n jumps
+ * interpolation_search - funct that searches for a value in a sorted array
+ * of int iterating using interpolation between gaps of index
  * @array: Type pointer of given array
  * @size: Type size of elements in the array
  * @value: Type value to be searched
@@ -18,7 +18,7 @@ int interpolation_search(int *array, size_t size, int value)
 	for (low = 0, high = size - 1; high >= low;)
 	{
 		i = low + (((double)(high - low) / (array[high] - array[low])) *
-			   (value - array[i]));
+			   (value - array[low]));
 		if (i < size)
 			printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 		else
