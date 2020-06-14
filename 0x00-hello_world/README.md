@@ -1,6 +1,6 @@
 # 0x00 C - Hello, World :pencil2:
 
-> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This is the first step for learning this awesome langugage
+> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This is the first step for learning this awesome language
 
 ## Learning Objectives :bookmark_tabs:
 
