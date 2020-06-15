@@ -39,7 +39,8 @@ At the end of this project, I was able to solve this questions:
 ### Try It On Your Machine computer:	
 ```bash
 git clone https://github.com/edward0rtiz/holbertonschool-low_level_programming.git
-cd 0x0F-function_pointers
+cd 
+0x10-variadic_functions
 gcc -Wall -pedantic -Werror -Wextra /PATH/main_files/MAIN_FILE.c FILENAME.c -o NEW_FILENAME
 ```
 
