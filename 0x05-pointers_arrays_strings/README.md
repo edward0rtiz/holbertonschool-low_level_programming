@@ -1,6 +1,6 @@
 # 0x05 C - Pointers, arrays and strings :pencil2:
 
-> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This projects covers pointer, arrays and strings concepts
+> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This project covers pointer, arrays and strings concepts
 
   At the end of this project, I am able to explain to anyone, without the help of Google:
 
