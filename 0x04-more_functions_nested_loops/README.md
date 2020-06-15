@@ -1,6 +1,6 @@
 # 0x04 C - More functions, more nested loops :pencil2:
 
-> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This projects cover more complex functions and nested loops development in C
+> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This project covers more complex functions and nested loops development in C
 ## Learning Objectives :bookmark_tabs:
 
   At the end of this project, I am able to explain to anyone, without the help of Google:
