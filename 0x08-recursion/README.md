@@ -46,7 +46,7 @@
 ### Try It On Your Machine computer:	
 ```bash
 git clone https://github.com/edward0rtiz/holbertonschool-low_level_programming.git
-cd 0x07-pointers_arrays_strings
+cd 0x08-recursion
 For scripts that need _putchar:
     gcc -Wall -pedantic -Werror -Wextra _putchar.c /PATH/main_files/MAIN_FILE.c FILENAME.c -o NEW_FILENAME
 
