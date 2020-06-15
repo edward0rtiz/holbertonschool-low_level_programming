@@ -1,6 +1,6 @@
 # 0x08 C - Recursion :pencil2:
 
-> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This projects covers the great topic of recursion; challenging but one of my favorites
+> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This project covers the great topic of recursion; challenging but one of my favorites
 
   At the end of this project, I am able to explain to anyone, without the help of Google:
 
