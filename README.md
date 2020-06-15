@@ -19,7 +19,7 @@
 | [0x08-recursion](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x08-recursion)| Scripst to implement recursion in nested loops|
 | [0x09-static_libraries](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x09-static_libraries)| Static libraries management and implementation of them |
 | [0x0A-argc_argv](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x0A-argc_argv)| Calculator project using argc and argv |
-| [0x0B-mallloc_free](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x0B-mallloc_free)| Intorduction to malloc and valgrind use |
+| [0x0B-mallloc_free](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x0B-malloc_free)| Intorduction to malloc and valgrind use |
 | [0x0C-more_malloc_free](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x0C-more_malloc_free)| Complex malloc implementation in C |
 | [0x0D-preprocessor](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x0D-preprocessor)| Scripts to understand prepocessor|
 | [0x0E-structures_typedef](https://github.com/edward0rtiz/holbertonschool-low_level_programming/tree/master/0x0E-structures_typedef)| Implementation of structures typedef|
