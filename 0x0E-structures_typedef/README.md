@@ -1,6 +1,6 @@
-# 0x0D C - Preprocessor :pencil2:
+# 0x0E C - Structures, typedef :pencil2:
 
-> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This projects covers the concept of preprocessor and how it works
+> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This projects covers the concept of structures and how define them 
 
   At the end of this project, I reached my goal to understand:
   
